@@ -11,6 +11,7 @@ const server = http.createServer(app);
 // ===== Configuration =====
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use("/", require("./routes/download"));
 
 // Fichiers statiques
 app.use(express.static(path.join(__dirname, "assets")));
